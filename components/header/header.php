@@ -9,12 +9,12 @@
     <img src="<?= $root ?>public/images/logo.svg" alt="Soft Cake">
     <div id="navbar">
         <ul>
-            <li>Catálogo</li>
-            <li>Sobre nós</li>
+            <li><a href="#">Catálogo</a></li>
+            <li><a href="#">Sobre nós</a></li>
             <li class="logo">
                 <img src="<?= $root ?>public/images/logo.svg" alt="Soft Cake">
             </li>
-            <li>Unidades</li>
+            <li><a href="#">Unidades</a></li>
             <li>
                 <?php if(isset($_SESSION['']))  {?>
                     <!-- <button>Login</button> -->
