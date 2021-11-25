@@ -16,5 +16,39 @@
 </head>
 <body>
     <?php require('./components/header/header.php'); ?>
+    <main>
+        <div id="principal">
+            <div class="conteudo">
+                <h1>Soft Cake</h1>
+                <p>O Soft Cake é um site de vendas de bolos veganos, com diversas opções de personalização.</p>
+            </div>
+            <a href="#">
+                <i class="fa-solid fa-angles-down"></i>
+            </a>
+        </div>
+        <div id="informacoes">
+            <div class="card">
+                <div class="icone">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h2>10:00 am - 7:00 pm</h2>
+                <p>Horário comercial</p>
+            </div>
+            <div class="card">
+                <div class="icone">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h2>10:00 am - 7:00 pm</h2>
+                <p>Horário comercial</p>
+            </div>
+            <div class="card">
+                <div class="icone">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h2>10:00 am - 7:00 pm</h2>
+                <p>Horário comercial</p>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
