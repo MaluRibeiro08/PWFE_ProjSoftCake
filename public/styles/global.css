@@ -33,6 +33,9 @@ header {
 
 header a {
   text-decoration: none;
+  font-size: 18px;
+  color: var(--preto);
+  transition: background-color 0.2s ease-in-out;
 }
 
 header i {
@@ -60,9 +63,6 @@ header ul {
 
 header li {
   list-style: none;
-  font-size: 18px;
-  color: var(--preto);
-  transition: background-color 0.2s ease-in-out;
 }
 
 button {
