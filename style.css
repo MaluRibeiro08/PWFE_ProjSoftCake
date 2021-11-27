@@ -29,6 +29,11 @@
   color: var(--primaria);
   position: absolute;
   margin: -12px 50%;
+  transition: margin 0.4s ease-in-out;
+}
+
+#principal i:hover {
+  margin: 0 50%;
 }
 
 #informacoes {
@@ -53,6 +58,11 @@
   background: var(--branco);
   box-shadow: 0px 0px 25px rgba(18, 18, 18, 0.05);
   border-radius: 0px 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#informacoes .card:hover {
+  transform: scale(1.1);
 }
 
 #informacoes .card .icone {
@@ -81,4 +91,38 @@
 #informacoes .card p {
   font-size: 16px;
   color: var(--cinza);
+}
+
+#unidades {
+  max-width: 1024px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#unidades h3 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 54px;
+  color: #29292E;
+  padding-bottom: 24px;
+}
+
+#unidades h3::after {
+  content: "";
+  display: block;
+  width: 114px;
+  height: 6px;
+  background: var(--primaria);
+  border-radius: 3px;
+  margin-top: -8px;
+}
+
+#unidades a {
+  font-weight: 300;
+  font-size: 18px;
+  color: #707078;
+  margin-left: auto;
+  margin-top: 8px;
 }
