@@ -13,27 +13,24 @@
   margin-left: 150px;
 }
 
-#principal .conteudo h1 {
-  font-size: 172px;
-  line-height: 136px;
-  color: var(--primaria);
-}
-
 #principal .conteudo p {
   color: var(--cinza);
   font-size: 18px;
 }
 
 #principal i {
+  display: flex;
+  align-items: center;
   font-size: 32px;
   color: var(--primaria);
   position: absolute;
-  margin: -12px 50%;
+  margin: -40px 50%;
   transition: margin 0.4s ease-in-out;
+  min-height: 70px;
 }
 
 #principal i:hover {
-  margin: 0 50%;
+  margin: -24px 50%;
 }
 
 #informacoes {
@@ -93,7 +90,7 @@
   color: var(--cinza);
 }
 
-#unidades {
+#catalogo, #unidades, #faq {
   max-width: 1024px;
   margin: auto;
 
@@ -101,28 +98,230 @@
   flex-direction: column;
 }
 
-#unidades h3 {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 54px;
-  color: #29292E;
-  padding-bottom: 24px;
+#unidades {
+  margin: 50px auto;
 }
 
-#unidades h3::after {
-  content: "";
-  display: block;
-  width: 114px;
-  height: 6px;
-  background: var(--primaria);
-  border-radius: 3px;
-  margin-top: -8px;
+#catalogo header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 48px;
 }
 
-#unidades a {
+#catalogo header .pesquisa, #catalogo header select {
+  border: 1px solid #707078;
+  border-radius: 12px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+}
+
+#catalogo header .pesquisa input {
+  width: 400px;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 0 24px;
+}
+
+#catalogo header .pesquisa button {
+  width: 48px;
+  height: 100%;
+  background-color: transparent;
+}
+
+#catalogo header .pesquisa button i {
+  color: var(--cinza);
+  font-size: 18px;
+}
+
+#catalogo header select {
+  padding: 0 18px;
+  color: var(--cinza)
+}
+
+#catalogo main {
+  display: flex;
+  gap: 86px;
+}
+
+#catalogo main .filtro-ingredientes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+
+#catalogo main .filtro-ingredientes > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#catalogo main .filtro-ingredientes input[type=checkbox] {
+  height: 21px;
+  width: 21px;
+  accent-color: #00a5a5;
+}
+
+#catalogo main .filtro-ingredientes label {
+  color: var(--preto);
+}
+
+#catalogo main .listagem {
+  width: 100%;
+}
+
+#catalogo main .listagem .produtos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
+  place-content: center;
+  gap: 2rem;
+}
+
+#catalogo main .listagem .paginacao {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+}
+
+#catalogo main .listagem .paginacao a {
   font-weight: 300;
   font-size: 18px;
-  color: #707078;
+  color: var(--cinza);
+  text-decoration: none;
+}
+
+#catalogo main .listagem .paginacao a:not(:last-child) {
+  display:block;
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid var(--cinza);
+  box-sizing: border-box;
+  border-radius: 50px;
+  
+  font-size: 14px;
+  text-align: center;
+  padding: .9% 0;
+}
+
+#catalogo main .listagem .paginacao a.active {
+  background-color: var(--primaria);
+  color: var(--branco);
+  border: none;
+  font-weight: bold;
+}
+
+#unidades > a {
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--cinza);
   margin-left: auto;
   margin-top: 8px;
+}
+
+#faq > div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#faq img {
+  max-height: 280px;
+}
+
+#faq .perguntas {
+  flex: 1;
+}
+
+#faq button {
+  background-color: transparent;
+  color: var(--preto);
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#faq button i {
+  color: var(--primaria)
+}
+
+#faq button[aria-expanded='true'] + p {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+#faq p {
+  opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+}
+
+@media (max-width: 1080px) {
+  #catalogo, #unidades, #faq {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 800px) {
+  #principal .conteudo {
+    margin: 0 80px;
+  }
+  #catalogo, #unidades, #faq {
+    max-width: 480px;
+  }
+
+  #catalogo header .pesquisa input {
+    width: 250px;
+  }
+
+  #catalogo header select {
+    padding: 0 4px;
+  }
+
+  #catalogo main .listagem .produtos {
+    margin-bottom: 24px;
+  }
+
+  #faq > div {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  #catalogo, #unidades, #faq {
+    max-width: 420px;
+  }
+
+  #catalogo header .pesquisa input {
+    width: 210px;
+  }
+
+  #catalogo main {
+    flex-direction: column;
+    gap: 24px
+  }
+
+  #catalogo main .filtro-ingredientes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5ch, 1fr));
+    place-content: center;
+    gap: 2rem;
+  }
 }

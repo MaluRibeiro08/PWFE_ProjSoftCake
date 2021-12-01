@@ -114,6 +114,98 @@ button:hover {
   filter: brightness(95%);
 }
 
+h3 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 54px;
+  color: var(--preto);
+  padding-bottom: 24px;
+}
+
+h3::after {
+  content: "";
+  display: block;
+  width: 114px;
+  height: 6px;
+  background: var(--primaria);
+  border-radius: 3px;
+  margin-top: -8px;
+}
+
+.card-produto {
+  display: flex;
+  flex-direction: column;
+  width: 264px;
+  height: 300px;
+  border-radius: 0px 24px;
+  box-shadow: 0px 0px 25px rgba(18, 18, 18, 0.05);
+  margin: 0 auto;
+}
+
+.card-produto > * {
+  flex: 1;
+}
+
+.card-produto img {
+  max-height: 172px;
+  object-fit: cover;
+  border-radius: 0px 24px 0 0;
+}
+
+.card-produto .titulo {
+  display: flex;
+}
+
+.card-produto .informacoes {
+  position: relative;
+  padding: 16px 24px;
+}
+
+.card-produto .informacoes .titulo {
+  display: flex;
+  align-items: center;
+}
+
+.card-produto .informacoes .titulo h4 {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 22px;
+  color: var(--cinza);
+}
+
+.card-produto .informacoes .titulo h5 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 54px;
+  color: var(--cinza);
+}
+
+.card-produto .informacoes button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 100px;
+  height: 55px;
+  border-radius: 24px 0px 0px 0px;
+}
+
+.card-produto .informacoes button i {
+  font-size: 32px;
+}
+
+.card-produto .informacoes .estrelas {
+  display: flex;
+  height: 38px;
+  align-items: self-end;
+  gap: 6px;
+}
+
+.card-produto .informacoes .estrelas i {
+  color: var(--amarelo);
+  font-size: 18px;
+}
+
 @media (max-width: 1080px) {
   header i {
     display: block !important;
