@@ -70,6 +70,15 @@ header li {
   list-style: none;
 }
 
+header li .foto {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 2px solid var(--primaria);
+}
+
 footer {
   margin-top: 86px;
   background-color: var(--primaria);

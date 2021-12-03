@@ -1,3 +1,28 @@
+const userToken = localStorage.getItem('token');
+
+const getUser = async (token) => {
+    if(token != null) {
+        const user = await fetch('http://localhost/softcake/backend/v1/auth/?acao=get', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+            }
+        })
+    
+        return await user.json();
+    }
+    return null;
+}
+
+var user;
+
+getUser(userToken).then(userData => {
+    user = userData;
+    
+    customElements.define('main-header', Header);
+});
+
 class Header extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
@@ -19,11 +44,7 @@ class Header extends HTMLElement {
                     </li>
                     <li><a href="/unidades">Unidades</a></li>
                     <li>
-                        <?php if(isset($_SESSION['']))  {?>
-                            
-                        <?php } else { ?>
-                            <button onclick="window.location='/autenticacao/login'">Login</button>
-                        <?php } ?>
+                        ${user != null ? `<img src="${user.foto}" alt="${user.email}" class="foto">` : `<button onclick="window.location='/autenticacao/login'">Login</button>`}
                     </li>
                 </ul>
                 <a class="background" href="#"></a>
@@ -32,5 +53,3 @@ class Header extends HTMLElement {
       `;
     }
 }
-
-customElements.define('main-header', Header);

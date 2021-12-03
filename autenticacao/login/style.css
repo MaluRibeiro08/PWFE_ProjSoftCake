@@ -48,7 +48,6 @@ main .formulario {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
 }
 
 main h2{
@@ -65,7 +64,6 @@ u .esqueci-a-senha {
     color: var(--primaria);
     margin-left: 20px;
     cursor: pointer;
-    
 }
 
 main button {
