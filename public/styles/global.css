@@ -177,6 +177,12 @@ button:hover {
   filter: brightness(95%);
 }
 
+button.secondary {
+  background-color: var(--branco);
+  color: var(--primaria);
+  border: 2px solid var(--primaria);
+}
+
 h3 {
   font-weight: bold;
   font-size: 36px;
@@ -267,6 +273,33 @@ h3::after {
 .card-produto .informacoes .estrelas i {
   color: var(--amarelo);
   font-size: 18px;
+}
+
+.separador {
+  width: 100%;
+
+  font-size: 14px;
+  color: #707078;
+
+  margin: 14px 0;
+  display: flex;
+  align-items: center;
+}
+
+.separador::before {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #707078;
+  margin-right: 16px;
+}
+
+.separador::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #707078;
+  margin-left: 16px;
 }
 
 @media (max-width: 1080px) {

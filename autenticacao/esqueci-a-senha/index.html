@@ -6,38 +6,30 @@
     <title>Soft Cake</title>
     <script src="" defer></script>
     <link rel="stylesheet" href="../../public/styles/global.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/7cbb7ae6e7.js" crossorigin="anonymous"></script>
     <script src="../../components/header/header.js" defer></script>
 </head>
 <body>
     <main-header></main-header>
     <main>
-        <div class="apresentacao">
-            <img src="/public/images/cake-login.png" alt="">
-            <div class="apresentacao-texto" id="apresentacao-texto">
-            <h1>Soft Cake</h1>
-            <p id="bem-vindo">Seja-bem-vindo!</p>
-        </div>
-        </div>
+        <img src="../../public/images/background.png" alt="Soft Cake Background" class="apresentacao">
         <div class="formulario">
-            <h2>Esqueci minha  senha</h1>
-            <p id="preencha-dados">Preencha seus dados</p>
-
-            <form action="">
-                
-                <label for="email">
+            <div class="conteudo">
+                <div class="titulo">
+                    <h2>Esqueci minha senha</h1>
+                    <p id="preencha-dados">Preencha seus dados</p>
+                </div>
+    
+                <form>
                     <div class="email input">
-                        <input type= "text" src="/public/icons/lock.png" id= "email" name= "email" placeholder="Email" >
+                        <input type= "text" id= "email" name= "email" placeholder="Email" >
                         <img src="/public/icons/user.png" width=20 />
                     </div>
-                </label>
-
-              
-                <button>Enviar confirmação</button>
-            </form>
-         
-           
+    
+                    <button id="autenticar">Enviar confirmação</button>
+                </form>
+            </div>
     </main>
 </body>
 </html>
