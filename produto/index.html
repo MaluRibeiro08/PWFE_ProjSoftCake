@@ -17,32 +17,27 @@
     <main>
         <div class="imagens">
             <div class="conteudo">
-                <img src="https://images.unsplash.com/photo-1614174486496-344ef3e9d870?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="Bolo X 1">
-                <div class="secundarias">
-                    <img src="https://images.unsplash.com/photo-1614174486496-344ef3e9d870?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="Bolo X 2">
-                    <img src="https://images.unsplash.com/photo-1614174486496-344ef3e9d870?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="Bolo X 3">
-                    <img src="https://images.unsplash.com/photo-1614174486496-344ef3e9d870?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="Bolo X 4">
-                    <img src="https://images.unsplash.com/photo-1614174486496-344ef3e9d870?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="Bolo X 5">
-                </div>
+                <img id="principal">
+                <div class="secundarias"></div>
             </div>
         </div>
         <div class="informacoes">
             <div class="conteudo">
-                <h1>Bolo com recheio de baunilha e morango caramelizado</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at amet pellentesque purus, arcu massa, ullamcorper potenti. Nulla aliquam pulvinar nunc vel.</p>
-                <h2>R$45,00</h2>
+                <h1 id="titulo">Bolo com recheio de baunilha e morango caramelizado</h1>
+                <p id="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at amet pellentesque purus, arcu massa, ullamcorper potenti. Nulla aliquam pulvinar nunc vel.</p>
+                <h2 id="preco">R$20,00</h2>
                 <div class="tipo">
                     <p>Tipo:</p>
                     <div class="tipos">
                         <button>Pote - 300g</button>
                         <button class="selected">Pote - 500g</button>
-                        <button>Bolo de <input type="number" step="1" min="0" max="10" id="kg" name="kg"> KGs</button>
+                        <button>Bolo de <input type="number" value="1" step="1" min="1" max="10" id="kg" name="kg"> KGs</button>
                     </div>
                 </div>
                 <div class="acoes">
                     <div class="quantidade">
                         <label for="quantidade">QTD</label>
-                        <input type="number">
+                        <input type="number" value="1" min="1">
                     </div>
                     <button>Comprar</button>
                 </div>

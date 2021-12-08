@@ -2,7 +2,8 @@ main {
     display: flex;
     max-width: 1420px;
     margin: auto;
-    height: 80%;
+    min-height: 80%;
+    align-items: center;
 }
 
 .imagens, .informacoes {
@@ -15,7 +16,18 @@ main {
     align-items: center;
 }
 
+.imagens {
+    width: 500px;
+    max-width: 90vw;
+}
+
+.imagens .conteudo {
+    width: 100%;
+}
+
 .imagens img {
+    width: 100%;
+    height: 420px;
     background: rgba(0, 168, 168, 0.1);
     border: 4px solid var(--primaria);
     object-fit: cover;
@@ -37,9 +49,14 @@ main {
     width: 122px;
     height: 90px;
     border-radius: 12px;
+    cursor: pointer;
 }
 
-.conteudo {
+.imagens .secundarias img:not(.selected) {
+    opacity: 0.7;
+}
+
+.informacoes .conteudo {
     max-width: 80%;
     margin: auto;
 }
@@ -111,6 +128,10 @@ main {
     margin: 0;
     -webkit-appearance: none;
     -moz-appearance: textfield;
+
+    text-align: center;
+    font-weight: 600;
+    color: var(--primaria);
 }
 
 .informacoes .conteudo .acoes {
@@ -145,8 +166,9 @@ main {
         flex-direction: column;
     }
 
-    .imagens .conteudo {
-        width: 100%;
+    .imagens {
+        width: 80%;
+        margin: auto;
     }
 
     .informacoes .conteudo .tipo  {
@@ -156,10 +178,6 @@ main {
 }
 
 @media (max-width: 750px) {
-    .imagens .conteudo > img {
-        height: 50%;
-    }
-
     .imagens, .informacoes {
         justify-content: start;
         height: auto;

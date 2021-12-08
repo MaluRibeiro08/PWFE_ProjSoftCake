@@ -12,7 +12,7 @@ function toggleFAQ() {
 
 items.forEach(item => item.addEventListener('click', toggleFAQ));
 
-function renderCakes() {
+const renderizarBolos = () => {
   fetch('http://localhost/softcake/backend/v1/bolo/', {
     method: 'GET',
     headers: {
@@ -50,4 +50,4 @@ function renderCakes() {
   });
 }
 
-renderCakes();
+renderizarBolos();
