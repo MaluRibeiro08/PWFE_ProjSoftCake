@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Cake</title>
+    <script src="" defer></script>
+    <link rel="stylesheet" href="../../public/styles/global.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/7cbb7ae6e7.js" crossorigin="anonymous"></script>
+    <script src="../../components/header/header.js" defer></script>
+    <script src="./script.js" defer></script>
+    <script src="../../components/footer/footer.js" defer></script>
+</head>
+<body>
+    <main-header></main-header>
+    <main>
+        <div class="imagens">
+            <a href="/"><img src="/public/icons/Back.png" class="voltar" alt="voltar"></a>
+            <div class="conteudo">
+                <img id="principal">
+                <div class="secundarias">
+                </div>
+            </div>
+        </div>
+        <div class="informacoes">
+            <form class="conteudo" action="http://localhost/softcake/backend/v1/bolo" method="POST">
+                <input type="hidden" name="idBolo">
+
+                <h2>Título</h2>
+                <input type="text" placeholder="Insira o título do produto." id="titulo" name="nomeDetalhado" required>
+               
+                <h2>Título do Card</h2>
+                <input type="text" placeholder="Insira o título do card do produto." id="titulo-card" name="nomeCard" required>
+
+                <h2>Descrição</h2>
+                <textarea type="text" placeholder="Insira a descrição do produto." id="descricao" name="descricao" required></textarea>
+
+                <h2>Preço por quilo</h2>
+                <input type="text" placeholder="R$XX,XX" id="preco" name="precoQuilo" required>
+
+                <div class="acoes">
+                    <button type="button" onclick="window.location.href='/'" class="secondary">Cancelar</button>
+                    <button>Salvar</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <main-footer></main-footer>
+</body>
+</html>
