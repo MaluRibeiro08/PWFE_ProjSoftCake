@@ -1,0 +1,280 @@
+body
+{
+    /* background-color: burlywood; */
+    display: flex;
+    flex-direction: column;
+}
+
+main
+{
+    /* background-color: brown; */
+    width: 100%;
+    height: 100vh;
+    padding-top: 64px;
+    padding-inline-start: 180px;
+    padding-inline-end: 240px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.container-geral-informacoes-perfil
+{
+    /* background-color: coral; */
+
+    width: 100%;
+    flex-grow: 2;
+    display: flex;  
+    flex-direction: row;
+    gap: 84px;
+}
+.conteiner-titulo-perfil
+{
+    margin-bottom: 24px;
+}
+.primeiro-conteiner-especifico-info-perfil
+{
+    /* background-color: dodgerblue; */
+
+    height: 100%;
+    width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.conteiner-geral-foto-perfil
+{
+    /* background-color: fuchsia; */
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+   gap: 24px;
+}
+
+.conteiner-foto-perfil
+{
+    /* background-color: #fff; */
+
+    width: auto;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.div-contorno-foto-perfil
+{
+    /* background-color: green  ; */
+    width: 116px;
+    height: 116px;
+    border-radius: 58px;
+    border: 4px solid;
+    border-color: var(--primaria)   ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 2px;
+}
+
+img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.conteiner-botoes-foto-perfil
+{
+    /* background-color: indigo; */
+    
+    flex-grow: 2;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+.conteiner-botoes-foto-perfil button
+{
+    width: 100%;
+    height: 52px;
+}
+
+.button-remover-foto-perfil
+{
+    background-color: transparent;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--primaria);
+
+    color: var(--primaria);
+}
+
+.conteiner-campo
+{
+    color: var(--primaria);
+}
+
+.conteiner-campos-infos-usuario
+{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    /* background-color: rgb(230, 235, 163); */
+}
+
+.conteiner-input
+{
+    width: 100%;
+    height: 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    padding-left: 10px;
+    border-color: var(--primaria);
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.conteiner-input i
+{
+    margin-right: 12px;
+}
+
+.conteiner-input input
+{
+    flex-grow: 1;
+    height: 100%;
+
+    border-radius: 10px;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border: none;
+    padding: 7px;
+    color: var(--primaria);
+    font-size: 18px;
+}
+.segundo-conteiner-especifico-info-perfil
+{
+    /* background-color: rgb(30, 255, 30); */
+
+    height: 100%;;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.segundo-conteiner-campos-infos-usuario
+{
+    width: 50%;
+}
+
+.conteiner-geral-fidelizacao
+{
+    /* background-color: turquoise; */
+
+    width: 100%;
+    flex-grow: 1;
+}
+.conteiner-barra-fidelizacao
+{
+    /* background-color: mediumslateblue; */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    color:  var(--amarelo);
+}
+
+.barra1
+{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.barra8
+{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.barra-fidelizacao
+{
+    background-color: var(--primaria);
+    height: 10px;
+    
+    width: 50px;
+}
+
+.conteiner-historico-pedidos
+{
+    background-color: darkviolet;
+}
+
+
+
+h2, h3 {
+font-weight: bold;
+line-height: 54px;
+color: var(--preto);
+padding-bottom: 24px;
+}
+
+h2
+{
+    font-size: 36px;
+}
+
+h3
+{
+    font-size: 24px;
+}
+
+h2::after {
+content: "";
+display: block;
+width: 114px;
+height: 6px;
+background: var(--primaria);
+border-radius: 3px;
+margin-top: -8px;
+}
+
+h3::after {
+content: "";
+display: block;
+width: 114px;
+height: 3px;
+background: var(--primaria);
+border-radius: 3px;
+margin-top: -8px;
+}
+
+.conteriner-rolagem-pedidos {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  
+    
+  }
+.conteiner-pedido{
+      flex: 0 0 auto;
+}
