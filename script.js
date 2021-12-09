@@ -1,6 +1,28 @@
+
+import { obterBolos, carregarUtilitarios } from './utils/bolo.js';
+
 const items = document.querySelectorAll(".item-pergunta button");
 
-var produtos;
+const checarAdmin = async () => {
+  if(localStorage.getItem('token') != null) {
+    return fetch('http://localhost/softcake/backend/v1/perfil/?acao=get', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem('token')
+      }
+    }).then(response => response.json()).then(user => {
+      if(user.isAdmin == "1") return true;
+      else return false;
+    });
+  } else {
+    return false;
+  }
+}
+
+checarAdmin().then(usuarioEAdmin => { 
+  obterBolos(usuarioEAdmin);
+  carregarUtilitarios(usuarioEAdmin);
+});
 
 function toggleFAQ() {
   const itemToggle = this.getAttribute('aria-expanded');
@@ -11,43 +33,3 @@ function toggleFAQ() {
 }
 
 items.forEach(item => item.addEventListener('click', toggleFAQ));
-
-const renderizarBolos = () => {
-  fetch('http://localhost/softcake/backend/v1/bolo/', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }).then(response => response.json()).then(listaProdutos => { 
-    const divProdutos = document.querySelector('.produtos');
-  
-    produtos = Object.values(listaProdutos);
-
-    produtos.forEach(produto => {
-      const div = document.createElement('div');
-      div.classList.add('card-produto');
-      div.innerHTML = `
-        <img src="${produto.imagens[0]}" alt="Imagem ilustrativa de ${produto.nomeCard}">
-        <div class="informacoes">
-            <div class="titulo">
-                <h4>${produto.nomeCard}</h4>
-                <h5>R$${produto.precoPorQuilo}</h5>
-            </div>
-            <div class="estrelas">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <button type="button" onclick="window.location.href='/produto/?id=${produto.idBolo}'">
-                <i class="fas fa-shopping-cart"></i>
-            </button>
-        </div>
-      `;
-      divProdutos.appendChild(div);
-    });
-  });
-}
-
-renderizarBolos();

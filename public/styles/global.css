@@ -202,6 +202,7 @@ h3::after {
 }
 
 .card-produto {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 264px;

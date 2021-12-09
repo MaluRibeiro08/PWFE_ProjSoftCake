@@ -190,6 +190,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: 7px;
+  margin-top: 24px;
 }
 
 #catalogo main .listagem .paginacao a {
@@ -272,6 +273,31 @@
     overflow: hidden;
     transition: opacity 200ms linear, max-height 200ms linear;
     will-change: opacity, max-height;
+}
+
+.acoes-produtos {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 10px;
+  display: flex;
+  gap: 12px;
+
+  background-color: var(--primaria);
+  border-radius: 6px;
+
+  z-index: 1;
+}
+
+.acoes-produtos i {
+  color: var(--branco);
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 500ms ease-in-out;
+}
+
+.acoes-produtos i:hover {
+  color: var(--cinza-claro);
 }
 
 @media (max-width: 1080px) {
