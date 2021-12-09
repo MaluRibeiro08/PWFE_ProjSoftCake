@@ -5,21 +5,21 @@ document.getElementById('autenticar').addEventListener('click', function(e){
         senha: document.getElementById('senha').value
     }
 
-    fetch('http://localhost/softcake/backend/v1/auth/?acao=login', {
+    fetch('http://localhost/softcake/backend/v1/perfil/?acao=login', {
         method: 'POST',
         body: JSON.stringify(dados),
         headers: {
             'Content-Type': 'application/json'
         }
-    }).then(function(response){
+    }).then((response) => {
         return response.json();
-    }).then(function(data){
+    }).then((data) => {
         console.log(data);
         if(data.status == 'error') {
             alert(data.message);
         } else {
             localStorage.setItem('token', data.message);
-            window.location.href = '../../index.html';
+            window.location.href = '../../';
         }
     });
 });

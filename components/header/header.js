@@ -2,7 +2,7 @@ const userToken = localStorage.getItem('token');
 
 const getUser = async (token) => {
     if(token != null) {
-        const user = await fetch('http://localhost/softcake/backend/v1/auth/?acao=get', {
+        const user = await fetch('http://localhost/softcake/backend/v1/perfil/?acao=get', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -44,7 +44,11 @@ class Header extends HTMLElement {
                     </li>
                     <li><a href="/unidades">Unidades</a></li>
                     <li>
-                        ${user != null ? `<img src="${user.foto}" alt="${user.email}" class="foto">` : `<button onclick="window.location='/autenticacao/login'">Login</button>`}
+                        ${user != null ?
+                            `<a href="/usuario/perfil">
+                                <img src="${user.foto ?? 'https://iupac.org/wp-content/uploads/2018/05/default-avatar.png'}" alt="${user.nome}" class="foto">
+                            </a>` :
+                            `<button onclick="window.location='/autenticacao/login'">Login</button>`}
                     </li>
                 </ul>
                 <a class="background" href="#"></a>
