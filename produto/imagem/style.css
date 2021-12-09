@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 309px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+}
+
+main p {
+    color: var(--primaria);
+}
+
+#inputInserirImg {
+    width: 100%;
+    height: 50px;
+    padding: 0 2rem;
+    margin-top: 1rem;
+    outline: none;
+    color: rgba(166, 166, 166);
+    font-size: 12px;
+    border-radius: 10px;
+    color: var(--primaria);
+    border: 1px solid var(--primaria);
+}
+
+::placeholder {
+    color: #b0d2d2;
+    font-size: 18px;
+}
+
+input[type="file"] {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+button {
+    width: 240px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    background-color: var(--primaria);
+}
+
+
+#buttonCancelar {
+    border: 1px solid var(--branco-escuro);
+    background-color: var(--branco-escuro);
+    color: var(--cinza);
+}
+
+#buttonSalvar {
+    border: 1px solid var(--primaria);
+}
+
+
+/*--secundaria: #b0d2d2; */
