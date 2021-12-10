@@ -1,6 +1,6 @@
-const userToken = localStorage.getItem('token');
+var userToken = localStorage.getItem('token');
 
-const getUser = async (token) => {
+var getUser = async (token) => {
     if(token != null) {
         const user = await fetch('http://localhost/softcake/backend/v1/perfil/?acao=get', {
             method: 'GET',
@@ -15,10 +15,10 @@ const getUser = async (token) => {
     return null;
 }
 
-var user;
+var perfil;
 
 getUser(userToken).then(userData => {
-    user = userData;
+    perfil = userData;
     
     customElements.define('main-header', Header);
 });
@@ -44,9 +44,9 @@ class Header extends HTMLElement {
                     </li>
                     <li><a href="/unidades">Unidades</a></li>
                     <li>
-                        ${user != null ?
+                        ${perfil != null ?
                             `<a href="/usuario/perfil">
-                                <img src="${user.foto ?? 'https://iupac.org/wp-content/uploads/2018/05/default-avatar.png'}" alt="${user.nome}" class="foto">
+                                <img src="${perfil.foto ?? 'https://iupac.org/wp-content/uploads/2018/05/default-avatar.png'}" alt="${perfil.nome}" class="foto">
                             </a>` :
                             `<button onclick="window.location='/autenticacao/login'">Login</button>`}
                     </li>
