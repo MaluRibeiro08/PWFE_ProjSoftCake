@@ -157,15 +157,18 @@ h5 {
 
 @media (max-width: 750px) {
 
-    img #teste {
-        
+    main .informacoes img#background {
+        width: 100vw;
+        height: 900px;
+        object-fit: cover;
+     
     }
 
     h1 {
         position: absolute;
         width: 215px;
         height: 62px;
-        left: 80px;
+        left: 120px;
         top: 150px;
         font-style: normal;
         font-size: 40px;
@@ -191,7 +194,7 @@ h5 {
         position: absolute;
         width: 214px;
         height: 151px;
-        left: 130px;
+        left: 150px;
         top: 250px;
         font-size: 15px;
         line-height: 22px;
