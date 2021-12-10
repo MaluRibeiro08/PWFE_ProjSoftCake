@@ -17,7 +17,7 @@
     <main>
         <div class="imagens">
             <a href="/"><img src="/public/icons/Back.png" class="voltar" alt="voltar"></a>
-            <div class="conteudo">
+            <div id="conteudo" class="conteudo">
                 <input id="inputFile1" class="inputFile" type="file" accept="image/*"/>
                 <label for="inputFile1" id="labelInputFile">
                      <img id="imagem1">
@@ -50,11 +50,11 @@
                 <div class="categorias"></div>
 
                 <h2>Preço por quilo</h2>
-                <input type="text" placeholder="R$XX,XX" id="preco" name="precoQuilo" required>
+                <input type="text" placeholder="" value="30.00" id="preco" name="precoQuilo" disabled required>
 
                 <div class="acoes">
                     <button type="button" onclick="window.location.href='/'" class="secondary">Cancelar</button>
-                    <button id="botao-salvar1" type="button">Salvar</button>
+                    <button id="botao-salvar" type="button">Salvar</button>
                 </div>
 
             </form>

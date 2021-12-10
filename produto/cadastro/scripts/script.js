@@ -2,16 +2,14 @@
 
 import { imagemPreview } from "./imagem.js";
 
-const tratarImagem = ({target}) => 
+const tratamentoUploadImagem = ({target}) => 
 {
-    console.log('A')
     var idInputOrigem = target.id;
     var numeroInput = idInputOrigem.substr(-1, 1);
     var idTagDestino = `imagem${numeroInput}`;
 
     imagemPreview(idInputOrigem, idTagDestino)
     verificaCamposUploadDisponiveis(numeroInput)
-    
 }
 
 const verificaCamposUploadDisponiveis = (numeroUltimoInputUsado) =>
@@ -21,27 +19,87 @@ const verificaCamposUploadDisponiveis = (numeroUltimoInputUsado) =>
 
     if(document.getElementById(`inputFile${numInput}`) == null)
     {
-        containerInputsSecundarios.innerHTML += `
-            <div>
+        if (numInput <=5) 
+        {
+            const novaDivInputImagem = document.createElement("div")
+            novaDivInputImagem.innerHTML =
+            `
                 <input id="inputFile${numInput}" class="inputFile" type="file" accept="image/*"/>
                 <label for="inputFile${numInput}" id="labelInputFile">
-                    <img id="imagem${numInput}" >
+                <img id="imagem${numInput}" >
                 </label>
-            </div>
-        `;
+            `
+            containerInputsSecundarios.appendChild(novaDivInputImagem)
+            document.getElementById(`inputFile${numInput}`).addEventListener("change", tratamentoUploadImagem)
+        }
+        else{}
+    }
+    else{}
+}
 
-        console.log(`inputFile${numInput}`)
-
-        document.getElementById(`inputFile${numInput}`).addEventListener("change", tratarImagem)
+const tratamentoRegistroBolo = () =>
+{
+    if (validacaoCampos()) {
+        console.log("oi! deu certo")
     }
     else
     {
-        console.log("tudo ok hehe")
+        alert("Preencha todos os campos!")
     }
 }
 
-document.getElementById("inputFile1").addEventListener("change", tratarImagem)
-document.getElementById("inputFile2").addEventListener("change", tratarImagem)
+const validacaoCampos = () =>
+{
+    const campoTitulo = document.getElementById("titulo")
+    const campoTituloCard = document.getElementById("titulo-card")
+    const campoDescricao = document.getElementById("descricao")
+    const campoPrecoQuilo = document.getElementById("preco")
+    const inputImagemPrincipal = document.getElementById("inputFile1")
+    const imagemPrincipal = document.getElementById("imagem1")
+
+    var retorno = true
+
+    if (campoTitulo.value.trim() == null || campoTitulo.value == "") {
+        campoTitulo.style.borderColor = "red"
+        retorno = false
+    }else{
+        campoTitulo.style.borderColor = null
+    }
+
+    if (campoTituloCard.value.trim() == null || campoTituloCard.value == "") {
+        campoTituloCard.style.borderColor = "red"
+        retorno = false
+    }else{
+        campoTituloCard.style.borderColor = null
+    }
+    
+    if (campoDescricao.value.trim() == null || campoDescricao.value == "") {
+        campoDescricao.style.borderColor = "red"
+        retorno = false
+    }else{
+        campoDescricao.style.borderColor = null
+    }
+
+    if (campoPrecoQuilo.value.trim() == null || campoPrecoQuilo.value == "" || campoPrecoQuilo.value != 30.0 ) {
+        campoPrecoQuilo.style.borderColor = "red"
+        campoPrecoQuilo.value = 30.0
+        retorno = false
+    }else{
+        campoPrecoQuilo.style.borderColor = null
+    }
+
+    if ( inputImagemPrincipal.files[0] == null) {
+        imagemPrincipal.style.borderColor = "red"       
+    }
+    else{
+        imagemPrincipal.style.borderColor = null
+    }
+
+    return retorno
+}
+document.getElementById("inputFile1").addEventListener("change", tratamentoUploadImagem)
+document.getElementById("inputFile2").addEventListener("change", tratamentoUploadImagem)
+document.getElementById("botao-salvar").addEventListener("click", tratamentoRegistroBolo)
 
 const adicionarCategoria = () => {};
 
