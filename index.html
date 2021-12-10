@@ -13,6 +13,7 @@
 
     <script src="./components/header/header.js" defer></script>
     <script src="./components/footer/footer.js" defer></script>
+    <script src="./components/whatsapp/whatsapp.js" defer></script>
 </head>
 <body>
     <main-header></main-header>
@@ -54,10 +55,11 @@
             <header>
                 <div class="pesquisa">
                     <input type="text" placeholder="Insira o nome do produto">
-                    <button>
+                    <button class="botao-pesquisa">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
+                <button class="adicionar-bolo"></button>
                 <select name="filtro" id="filtro">
                     <option value="mais-vendidos">Mais vendidos</option>
                     <option value="menos-vendidos">Menos vendidos</option>
@@ -104,6 +106,7 @@
                 </div>
             </div>
         </section>
+        <whatsapp-button></whatsapp-button>
     </main>
     <main-footer></main-footer>
     <script>
