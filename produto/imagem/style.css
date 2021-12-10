@@ -55,7 +55,7 @@ button {
 #buttonCancelar {
     border: 1px solid var(--branco-escuro);
     background-color: var(--branco-escuro);
-    color: var(--cinza);
+    color: var(--cinza-escuro);
 }
 
 #buttonSalvar {

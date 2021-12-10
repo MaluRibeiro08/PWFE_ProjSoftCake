@@ -38,7 +38,7 @@ main .formulario .conteudo .titulo h2 {
 
 main .formulario .conteudo .titulo p  {
     font-size: 20px;
-    color: var(--cinza);
+    color: var(--cinza-escuro);
 }
 
 main .formulario .conteudo button {
