@@ -20,11 +20,36 @@ const checarAdmin = async () => {
 }
 
 checarAdmin().then(usuarioEAdmin => { 
+  const inputPesquisa = document.querySelector('.pesquisa input');
+  const botaoPesquisa = document.querySelector('.botao-pesquisa');
+
+  console.log(inputPesquisa.value);
+
+  const filtrarPesquisa = () => {
+    if(inputPesquisa.value == '') {
+      obterBolos(usuarioEAdmin);
+    } else if(inputPesquisa.value.length > 3) {
+      obterBolos(usuarioEAdmin, inputPesquisa.value);
+    }
+  }
+
+  botaoPesquisa.addEventListener('click', filtrarPesquisa)
+  inputPesquisa.addEventListener('keyup', (e) => {
+    if(e.keyCode == 13) {
+      filtrarPesquisa();
+    }
+  });
   obterBolos(usuarioEAdmin);
   carregarUtilitarios(usuarioEAdmin);
+
+  const botaoAdicionarBolo = document.querySelector("#catalogo header .adicionar-bolo");
+  botaoAdicionarBolo.innerHTML = '<i class="fas fa-plus"></i> Adicionar bolo';
+  botaoAdicionarBolo.addEventListener('click', () => {
+    window.location.href = '/produto/cadastro';
+  });
 });
 
-function toggleFAQ() {
+const toggleFAQ = () => {
   const itemToggle = this.getAttribute('aria-expanded');
   
   items.forEach(item => item.setAttribute('aria-expanded', 'false'))

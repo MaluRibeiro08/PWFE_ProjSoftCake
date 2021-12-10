@@ -1,4 +1,5 @@
 import { cortarArray } from './funcoes.js';
+import { getEstrelas } from './estrelas.js';
 
 var produtos;
 const wrapperFiltro = document.querySelector('.filtro-ingredientes');
@@ -6,51 +7,61 @@ const wrapperPaginacao = document.querySelector('.paginacao');
 const botoesPaginacao = wrapperPaginacao.querySelectorAll('a');
 var paginaAtual = 1;
 
-const obterBolos = (isAdmin) => {
+const obterBolos = (isAdmin, filtro = null) => {
 	fetch('http://localhost/softcake/backend/v1/bolo/', {
 	  method: 'GET',
 	  headers: {
 		'Content-Type': 'application/json'
 	  }
-	}).then(response => response.json()).then(listaProdutos => { 
-	  produtos = cortarArray(Object.values(listaProdutos), 6);
+	}).then(response => response.json()).then(listaProdutos => {
+	  listaProdutos = Object.values(listaProdutos);
+	  listaProdutos = filtro != null ? listaProdutos.filter(produto => produto.nomeDetalhado.toLowerCase().includes(filtro.toLowerCase())) : listaProdutos;
+	  produtos = cortarArray(listaProdutos, 6);
+	  
 	  renderizarBolos(produtos[0], isAdmin);
 	});
 }
 
 const renderizarBolos = (produtos, isAdmin) => {
+	limparBolos();
 	const divProdutos = document.querySelector('.produtos');
-
-  [...produtos].forEach(produto => {
+  if(produtos == undefined || produtos.length == 0) {
+    divProdutos.innerHTML = `
+      <div class="sem-resultados">
+        <h2>Nenhum resultado encontrado</h2>
+      </div>
+    `;
+  } else {
+	[...produtos].forEach(produto => {
 	  const div = document.createElement('div');
 	  div.classList.add('card-produto');
+  
+	  var estrelas = getEstrelas(produto["media-avaliacoes"]);
+	  
 	  div.innerHTML = `
 	  ${isAdmin == true ? `
-		<div class="acoes-produtos">
-		  <i class="fas fa-edit" onclick="editarBolo(${produto.idBolo})"></i>
-		  <i class="fas fa-trash" onclick="deletarBolo(${produto.idBolo})"></i>
-		</div>
+	    <div class="acoes-produtos">
+	  	<i class="fas fa-edit" onclick="editarBolo(${produto.idBolo})"></i>
+	  	<i class="fas fa-trash" onclick="deletarBolo(${produto.idBolo})"></i>
+	    </div>
 	  ` : ''}
-		<img src="${produto.imagens[0]}" alt="Imagem ilustrativa de ${produto.nomeCard}">
-		<div class="informacoes">
-			<div class="titulo">
-				<h4>${produto.nomeCard}</h4>
-				<h5>R$${produto.precoPorQuilo}</h5>
-			</div>
-			<div class="estrelas">
-				<i class="fas fa-star"></i>
-				<i class="fas fa-star"></i>
-				<i class="fas fa-star"></i>
-				<i class="fas fa-star"></i>
-				<i class="fas fa-star"></i>
-			</div>
-			<button type="button" onclick="window.location.href='/produto/?id=${produto.idBolo}'">
-				<i class="fas fa-shopping-cart"></i>
-			</button>
-		</div>
+	    <img src="${produto.imagens[0]}" alt="Imagem ilustrativa de ${produto.nomeCard}">
+	    <div class="informacoes">
+	  	  <div class="titulo">
+	  		  <h4>${produto.nomeCard}</h4>
+	  		  <h5>R$${produto.precoPorQuilo}</h5>
+	  	  </div>
+	  	  <div class="estrelas">
+	  			${estrelas.join('')}
+	  	  </div>
+	  	  <button type="button" onclick="window.location.href='/produto/?id=${produto.idBolo}'">
+	  		  <i class="fas fa-shopping-cart"></i>
+	  	  </button>
+	    </div>
 	  `;
 	  divProdutos.appendChild(div);
-	});
+	  });
+  }
 }
 
 const limparBolos = () => {
