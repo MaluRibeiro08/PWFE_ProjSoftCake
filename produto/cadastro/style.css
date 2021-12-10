@@ -112,7 +112,7 @@ main {
     border: 2px solid var(--primaria);
 }
 
-.informacoes .conteudo input, .informacoes .conteudo textarea {
+.informacoes .conteudo input:not([type="checkbox"]), .informacoes .conteudo textarea {
     width: 100%;
     border-radius: 5px;
     background: rgba(0, 168, 168, 0.05);
@@ -125,10 +125,35 @@ main {
     font-size: 16px;
     color: var(--preto);
 }
-.informacoes .conteudo input:focus, .informacoes .conteudo textarea:focus
-{   
+
+.informacoes .conteudo input:focus, .informacoes .conteudo textarea:focus {   
     background: rgba(6, 129, 129, 0.158);
     border: 1px solid var(--primaria);
+}
+
+.informacoes .conteudo .categorias {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.informacoes .conteudo .categorias .categoria {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.informacoes .conteudo .categorias .categoria input[type="text"] {
+    width: 70%;
+    background: transparent;
+    border: none;
+    border: 1px solid var(--cinza);
+    margin-bottom: 0;
+}
+
+.informacoes .conteudo .categorias .categoria button {
+    height: 41px;
+    border-radius: 5px;
 }
 
 ::placeholder {
@@ -149,7 +174,6 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 100%;
     cursor: pointer;
     z-index: 2;
