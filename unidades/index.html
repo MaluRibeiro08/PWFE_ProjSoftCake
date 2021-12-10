@@ -20,7 +20,7 @@
             <div class="infos-unidades">
                 <p>Encontre a unidade Soft Cake mais próxima a você.</p>
                 <select name="" id="select-cidades">
-                    <option value="">Selecione sua cidade</option>
+                    <option value="" disabled selected> Selecione sua cidade</option>
                     <option value="">Carapicuíba</option>
                     <option value="">Osasco</option>
                     <option value="">Barueri</option>
@@ -29,7 +29,10 @@
                 </select>
             </div>
         </div>
-
+        <div class="container-separador">
+            <div class="separador">Veja nossas unidades</div>
+        </div>
+        <!-- <footer><div class="separador">Veja nossas unidades</div></footer> -->
     </main>
     <script>
         const mapa = L.map('mapa').setView([-23.5439192, -46.8327736,17], 15)
