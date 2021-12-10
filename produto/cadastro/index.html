@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/7cbb7ae6e7.js" crossorigin="anonymous"></script>
     <script src="../../components/header/header.js" defer></script>
     <script src="../../components/footer/footer.js" defer></script>
+    <script src="./scripts/script.js" type="module" defer></script>
 </head>
 <body>
     <main-header></main-header>
@@ -17,13 +18,30 @@
         <div class="imagens">
             <a href="/"><img src="/public/icons/Back.png" class="voltar" alt="voltar"></a>
             <div class="conteudo">
-                <img id="principal">
+                <input id="inputFile1" class="inputFile" type="file" accept="image/*"/>
+                <label for="inputFile1" id="labelInputFile">
+                     <img id="imagem1">
+                </label>
                 <div class="secundarias">
+                    <div>
+                        <input id="inputFile2" class="inputFile" type="file" accept="image/*"/>
+                        <label for="inputFile2" id="labelInputFile">
+                            <img id="imagem2" >
+                        </label>
+                    </div>
+
+                    <div>
+                        <input id="inputFile3" class="inputFile" type="file" accept="image/*"/>
+                        <label for="inputFile3" id="labelInputFile">
+                            <img id="imagem3" >
+                        </label>
+                    </div>
+                      
                 </div>
             </div>
         </div>
         <div class="informacoes">
-            <form class="conteudo" action="http://localhost/softcake/backend/v1/bolo" method="PUT">
+            <form class="conteudo">
                 <input type="hidden" name="idBolo">
 
                 <h2>Título</h2>
@@ -40,9 +58,9 @@
 
                 <div class="acoes">
                     <button type="button" onclick="window.location.href='/'" class="secondary">Cancelar</button>
-                    <button>Salvar</button>
+                    <button id="botao-salvar1" type="button">Salvar</button>
                 </div>
-                </div>
+
             </form>
         </div>
     </main>
