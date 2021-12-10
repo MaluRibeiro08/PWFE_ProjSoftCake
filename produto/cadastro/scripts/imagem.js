@@ -3,9 +3,9 @@
 const imagemPreview = (idFile, idImagem) =>
 {
     //criando a imagem e o lugar onde a colocaremos 
-        const file = document.getElementById(idFile).files[0];
-        const preview = document.getElementById(idImagem);
-
+    const file = document.getElementById(idFile).files[0];
+    const preview = document.getElementById(idImagem);
+    
     // add um leitor de instanciando a CLASSE FileReader
         const fileReader = new FileReader();
 
