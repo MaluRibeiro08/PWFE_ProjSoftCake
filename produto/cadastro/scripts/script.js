@@ -1,6 +1,7 @@
 "use strict"
 
 import { imagemPreview } from "./imagem.js";
+const containerAdicionarCategoria = document.getElementById('adicionar-categoria')
 
 const tratamentoUploadImagem = ({target}) => 
 {
@@ -39,8 +40,34 @@ const verificaCamposUploadDisponiveis = (numeroUltimoInputUsado) =>
 
 const tratamentoRegistroBolo = () =>
 {
+    
     if (validacaoCampos()) {
-        console.log("oi! deu certo")
+        const bolo = {
+            nomeDetalhado: document.getElementById('titulo').value,
+            nomeCard: document.getElementById('titulo-card').value,
+            precoQuilo: 30,
+            descricao: document.getElementById('descricao').value,
+            ingredientes: [...document.querySelectorAll('.categorias input:checked')].filter(input => !isNaN(input.name)).map(input => input.name),
+            novosIngredientes: [...document.querySelectorAll('.categorias input:checked')].filter(input => isNaN(input.name)).map(input => input.name),
+            imagens: [...document.querySelectorAll('.imagens #conteudo img')].filter(img => img.src.trim() !== "").map(img => img.src),
+        }
+        
+        fetch('http://localhost/softcake/backend/v1/bolo/?acao=create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(bolo)
+        }).then(response => response.json()).then(data => {
+            console.log(data)
+            if(data.status == "success") {
+                alert("Bolo cadastrado com sucesso!");
+                window.location.href = "/";
+            } else {
+                alert("Erro ao cadastrar bolo!");
+            }
+        })
+        
     }
     else
     {
@@ -101,7 +128,20 @@ document.getElementById("inputFile1").addEventListener("change", tratamentoUploa
 document.getElementById("inputFile2").addEventListener("change", tratamentoUploadImagem)
 document.getElementById("botao-salvar").addEventListener("click", tratamentoRegistroBolo)
 
-const adicionarCategoria = () => {};
+const adicionarCategoria = () => {
+    const novaCategoria = document.getElementById('nova-categoria').value;
+    if(novaCategoria.trim() != "") {
+        const containerIngredientes = document.querySelector('.categorias');
+        const div = document.createElement('div');
+        div.classList.add('categoria');
+        div.innerHTML = `
+            <input type="checkbox" name="${novaCategoria}" id="ingrediente-${novaCategoria}" checked>
+            <label for="ingrediente-${novaCategoria}">${novaCategoria}</label>
+        `;
+        containerIngredientes.appendChild(div);
+        document.getElementById('nova-categoria').value = '';
+    }
+};
 
 const carregarCategorias = () => {
     fetch('http://localhost/softcake/backend/v1/ingrediente/', {
@@ -117,22 +157,19 @@ const carregarCategorias = () => {
             const div = document.createElement('div');
             div.classList.add('categoria');
             div.innerHTML = `
-                <input type="checkbox" name="${ingrediente.idIngrediente}" id="${ingrediente.idIngrediente}">
-                <label for="${ingrediente.idIngrediente}">${ingrediente.nome}</label>
+                <input type="checkbox" name="${ingrediente.idIngrediente}" id="ingrediente-${ingrediente.nome}">
+                <label for="ingrediente-${ingrediente.nome}">${ingrediente.nome}</label>
             `;
             containerIngredientes.appendChild(div);
         });
 
-        const div = document.createElement('div');
-        div.classList.add('categoria');
-        div.innerHTML = `
+        containerAdicionarCategoria.innerHTML = `
             <input type="text" placeholder="Nova categoria" name="nova-categoria" id="nova-categoria">
-            <button type="button" id="adicionar-categoria">Adicionar</button>
+            <button type="button" id="botao-adicionar-categoria">Adicionar</button>
         `;
-        div.addEventListener('click', adicionarCategoria);
-
-        containerIngredientes.appendChild(div);
+        containerAdicionarCategoria.querySelector('button').addEventListener('click', adicionarCategoria);
+        
     });
 }
 
-carregarCategorias()
+carregarCategorias();

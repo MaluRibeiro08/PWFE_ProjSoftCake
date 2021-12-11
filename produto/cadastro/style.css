@@ -137,25 +137,6 @@ main {
     gap: 8px;
 }
 
-.informacoes .conteudo .categorias .categoria {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.informacoes .conteudo .categorias .categoria input[type="text"] {
-    width: 70%;
-    background: transparent;
-    border: none;
-    border: 1px solid var(--cinza);
-    margin-bottom: 0;
-}
-
-.informacoes .conteudo .categorias .categoria button {
-    height: 41px;
-    border-radius: 5px;
-}
-
 ::placeholder {
     font-size: 14px;
     color: rgba(112, 112, 120, 0.7);
@@ -184,6 +165,26 @@ label {
     width: 100%;
     opacity: 0;
     display: none;
+}
+
+.informacoes .conteudo .categorias .categoria, #adicionar-categoria {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#adicionar-categoria input[type="text"] {
+    width: 70%;
+    background: transparent;
+    border: none;
+    border: 1px solid var(--cinza);
+    margin-bottom: 0;
+}
+
+#adicionar-categoria button {
+    height: 41px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 @media (max-width: 1240px) {
