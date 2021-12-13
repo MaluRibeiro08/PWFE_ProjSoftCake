@@ -85,6 +85,11 @@
   color: var(--preto);
 }
 
+#informacoes #texto-card-endereco {
+  font-size: 15px;
+  text-align: center;
+}
+
 #informacoes .card p {
   font-size: 16px;
   color: var(--cinza-escuro);
