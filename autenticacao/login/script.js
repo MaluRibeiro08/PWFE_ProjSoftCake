@@ -5,7 +5,7 @@ document.getElementById('autenticar').addEventListener('click', function(e){
         senha: document.getElementById('senha').value
     }
 
-    fetch('http://localhost/softcake/backend/v1/perfil/?acao=login', {
+    fetch('http://localhost/softcake/backend/v1/perfil/login/', {
         method: 'POST',
         body: JSON.stringify(dados),
         headers: {

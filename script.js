@@ -5,7 +5,7 @@ const items = document.querySelectorAll(".item-pergunta button");
 
 const checarAdmin = async () => {
   if(localStorage.getItem('token') != null) {
-    return fetch('http://localhost/softcake/backend/v1/perfil/?acao=get', {
+    return fetch('http://localhost/softcake/backend/v1/perfil/token/', {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer ' + localStorage.getItem('token')

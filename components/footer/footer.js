@@ -19,14 +19,14 @@ class Footer extends HTMLElement {
                 </div>
                 <div class="navegacao">
                   <div class="coluna">
-                    <a href="#">Conta</a>
+                    <a href="#">Telefone</a>
                     <a href="#">Ajuda</a>
-                    <a href="#">Vagas</a>
+                    <a href="#">Contratação</a>
                   </div>
                   <div class="coluna">
-                    <a href="#">+55 (11) 93833-2415</a>
-                    <a href="#">contato@scake.com</a>
-                    <a href="#">admin@scake.com</a>
+                    <a href="#">(11) 4761-4593</a>
+                    <a href="#">sac@softcake.com</a>
+                    <a href="#">softcake.trabalheconosco@gmail.com</a>
                   </div>
                   <div class="coluna">
                     <a href="#">Termos de uso</a>

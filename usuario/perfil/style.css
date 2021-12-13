@@ -81,15 +81,33 @@ main
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    object-fit: cover;
     
     padding: 2px;
 }
 
-img
+.conteiner-botoes-foto-perfil label, .div-contorno-foto-perfil img
 {
+    border-radius: 50px;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+}
+
+.div-contorno-foto-perfil img {
+    background: url('https://iupac.org/wp-content/uploads/2018/05/default-avatar.png');
+}
+
+.conteiner-botoes-foto-perfil input {
+    cursor: pointer;
+    opacity: 0;
+    height: 53px;
+    position: absolute;
+    z-index: 10;
+    margin-right: 0;
+    top: 0;
+    width: 100%;
 }
 
 .conteiner-botoes-foto-perfil
@@ -104,10 +122,12 @@ img
     align-items: end;
     justify-content: center;
     gap: 14px;
+
+    position: relative;
 }
 .conteiner-botoes-foto-perfil button
 {
-    width: 70%;
+    width: 100%;
     height: 52px;
 }
 

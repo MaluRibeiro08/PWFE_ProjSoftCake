@@ -1,6 +1,6 @@
 "use strict"
 
-import { imagemPreview } from "./imagem.js";
+import { imagemPreview } from "../../utils/imagem.js";
 const containerAdicionarCategoria = document.getElementById('adicionar-categoria')
 
 const tratamentoUploadImagem = ({target}) => 

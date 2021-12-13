@@ -2,7 +2,7 @@ var userToken = localStorage.getItem('token');
 
 var getUser = async (token) => {
     if(token != null) {
-        const user = await fetch('http://localhost/softcake/backend/v1/perfil/?acao=get', {
+        const user = await fetch('http://localhost/softcake/backend/v1/perfil/token/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

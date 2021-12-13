@@ -17,7 +17,7 @@ const imagemPreview = (idFile, idImagem) =>
         }
         else
         {
-            preview.src = './img/foto.png';
+            preview.src = 'https://iupac.org/wp-content/uploads/2018/05/default-avatar.png';
         }
         //quando terminar de carregar e de ler, coloca lá
         fileReader.onloadend = () => (preview.src = fileReader.result);
