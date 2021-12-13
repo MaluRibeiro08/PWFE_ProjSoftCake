@@ -4,9 +4,17 @@
 ![Language count](https://img.shields.io/github/languages/count/MaluRibeiro08/PWFE_ProjSoftCake?style=for-the-badge&color=00A8A8)
 ![License](https://img.shields.io/github/license/MaluRibeiro08/PWFE_ProjSoftCake?style=for-the-badge&color=00A8A8)
 
-<!-- <img src="imagem.png" alt="Soft Cake Screenshot"> -->
+<img src="./public/images/SoftCake.PNG" alt="Soft Cake Screenshot">
 
-> A empresa Soft Cake procura um site no qual seja possível expor seus produtos e informações sobre estes e sobre as unidades franqueadas. Além disso, solicitaram que fosse possível controlar o cadastro de clientes e suas compras, sendo esses registos disponibilizados posteriormente em forma de relatórios para usuários administradores. A empresa cliente indicou que as compras não seriam feitas no site, mas em plataformas como WhatsApp, sendo necessário desenvolver, portanto, ferramentas que direcionem o cliente para tais plataformas. 
+
+> A empresa Soft Cake procura um site no qual seja possível expor seus produtos (bolos veganos) e informações sobre os mesmos e as unidades franqueadas. Além disso, solicitaram que fosse possível controlar o cadastro de clientes e suas compras, sendo esses registos disponibilizados posteriormente em forma de relatórios para usuários administradores. A empresa cliente indicou que as compras não seriam feitas no site, mas em plataformas como WhatsApp, sendo necessário desenvolver, portanto, ferramentas que direcionem o cliente para tais plataformas. 
+
+> A empresa MIPE agradece a preferência dos clientes e disponibilizou-se para desenvolver esse projeto seguindo as boas práticas, além dos valores fundamentais como confiabilidade, qualidade e flexibilidade. 
+
+## 💻 Design
+
+ [LINK DO FIGMA](https://www.figma.com/file/pFgsQbvtgvT4WVCoPQJTGV/SoftCake?node-id=0%3A1) .
+
 
 ## 🤝 Colaboradores
 
@@ -49,6 +57,23 @@ Pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
+## 📚 Orientador
+
+Professor do [SENAI JANDIRA](https://jandira.sp.senai.br/) que contribuiu e orientou para construção do projeto:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/42476943?v=4" width="100px;" alt="Foto do Fernando Leonid"/><br>
+        <sub>
+          <b>Fernando Leonid</b>
+        </sub>
+      </a>
+    </td>
+    </table>
+
+  
 ## 📝 Licença
 
 Esse projeto está sob licença MIT. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
