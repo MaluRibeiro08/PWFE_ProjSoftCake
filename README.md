@@ -1,19 +1,23 @@
 # Soft Cake
 
 ![Repo size](https://img.shields.io/github/repo-size/MaluRibeiro08/PWFE_ProjSoftCake?style=for-the-badge&color=00A8A8)
-![Language count](https://img.shields.io/github/languages/count/MaluRibeiro08/PWFE_ProjSoftCake?style=for-the-badge&color=00A8A8)
 ![License](https://img.shields.io/github/license/MaluRibeiro08/PWFE_ProjSoftCake?style=for-the-badge&color=00A8A8)
 
 <img src="./public/images/SoftCake.PNG" alt="Soft Cake Screenshot">
 
+<br>
 
-> A empresa Soft Cake procura um site no qual seja possível expor seus produtos (bolos veganos) e informações sobre os mesmos e as unidades franqueadas. Além disso, solicitaram que fosse possível controlar o cadastro de clientes e suas compras, sendo esses registos disponibilizados posteriormente em forma de relatórios para usuários administradores. A empresa cliente indicou que as compras não seriam feitas no site, mas em plataformas como WhatsApp, sendo necessário desenvolver, portanto, ferramentas que direcionem o cliente para tais plataformas. 
+> A empresa **Soft Cake** procura um site no qual seja possível expor seus produtos (bolos veganos) e informações sobre os mesmos e as unidades franqueadas. Além disso, solicitaram que fosse possível controlar o cadastro de clientes e suas compras, sendo esses registros disponibilizados posteriormente em forma de relatórios para usuários administradores. A empresa cliente indicou que as compras não seriam feitas no site, mas em plataformas como WhatsApp, sendo necessário desenvolver, portanto, ferramentas que direcionem o cliente para tais plataformas. 
 
-> A empresa MIPE agradece a preferência dos clientes e disponibilizou-se para desenvolver esse projeto seguindo as boas práticas, além dos valores fundamentais como confiabilidade, qualidade e flexibilidade. 
+> A empresa **MIPE**  disponibilizou-se para desenvolver esse projeto, consistindo em uma central de desenvolvedores de sistemas que visa propiciar um design limpo, moderno e criativo em uma interface intuitiva em qualquer dispositivo, seguindo uma programação com qualidade em código, boas práticas e valores fundamentais como confiabilidade e flexibilidade para atender melhor os clientes. 
+
+"Aceitamos a proposta desenvolvendo sistemas de software, de acordo com as especificações, considerando as boas práticas do mercado de tecnologia da informação e as necessidades do usuário”. - MIPE 💻
+
+> Foi dado o início na elaboração da proposta durante o segundo semestre de 2021, com a parceria das turmas de Administração (clientes que trouxeram a proposta do site para  apresentar seus produtos) e Desenvolvimento de Sistemas (responsavéis pela criação do site). Tivemos momentos oportunos para reuniões de informações,  decisões e feedback.  
 
 ## 💻 Design
 
- [LINK DO FIGMA](https://www.figma.com/file/pFgsQbvtgvT4WVCoPQJTGV/SoftCake?node-id=0%3A1) .
+ [ | LINK DO FIGMA |](https://www.figma.com/file/pFgsQbvtgvT4WVCoPQJTGV/SoftCake?node-id=0%3A1) 
 
 
 ## 🤝 Colaboradores
@@ -40,17 +44,17 @@ Pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://github.com/ericknathan.png" width="100px;" alt="Foto do Erick Nathan no GitHub"/><br>
+             <img src="https://github.com/PedroMonteiro7.png" width="100px;" alt="Foto do Pedro Monteiro no GitHub"/><br>
         <sub>
-          <b>Erick Nathan</b>
+          <b>Pedro Monteiro</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://github.com/PedroMonteiro7.png" width="100px;" alt="Foto do Pedro Monteiro no GitHub"/><br>
+         <img src="https://github.com/ericknathan.png" width="100px;" alt="Foto do Erick Nathan no GitHub"/><br>
         <sub>
-          <b>Pedro Monteiro</b>
+          <b>Erick Nathan</b>
         </sub>
       </a>
     </td>
