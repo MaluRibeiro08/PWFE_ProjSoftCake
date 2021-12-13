@@ -8,7 +8,7 @@ var userToken = localStorage.getItem('token');
 
 var getUser = async (token) => {
     if(token != null) {
-        const user = await fetch('http://localhost/softcake/backend/v1/perfil/?acao=get', {
+        const user = await fetch('http://localhost/softcake/backend/v1/perfil/token/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const atualizarPerfil = () => {
 
     console.log(usuario)
 
-    fetch('http://localhost/softcake/backend/v1/perfil/?acao=update', {
+    fetch('http://localhost/softcake/backend/v1/perfil/', {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
