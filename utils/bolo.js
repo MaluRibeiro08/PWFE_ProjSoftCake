@@ -41,7 +41,7 @@ const renderizarBolos = (produtos, isAdmin) => {
 	  div.innerHTML = `
 	  ${isAdmin == true ? `
 	    <div class="acoes-produtos">
-	  	<i class="fas fa-edit" onclick="editarBolo(${produto.idBolo})"></i>
+	  	<i class="fas fa-edit" onclick="window.location.href = '/produto/edicao/?id=${produto.idBolo}'"></i>
 	  	<i class="fas fa-trash" onclick="deletarBolo(${produto.idBolo})"></i>
 	    </div>
 	  ` : ''}
