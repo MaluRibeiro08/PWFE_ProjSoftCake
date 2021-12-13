@@ -16,7 +16,7 @@ h1 {
     position: absolute;
     width: 164px;
     height: 255px;
-    left: 53px;
+    left: 45px;
     top: 240px;
 }
 
@@ -24,11 +24,11 @@ p {
     position: absolute;
     width: 854px;
     height: 157px;
-    left: 232px;
-    top: 350px;
+    left: 215px;
+    top: 250px;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 30px;
     text-align: center;
     color: #484848;
@@ -36,13 +36,13 @@ p {
 
 h4 {
     position: absolute;
-    width: 272px;
+    width: 330px;
     height: 174px;
     left: 61px;
-    top: 600px;
+    top: 540px;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 30px;
     text-align: center;
     color: #484848
@@ -52,8 +52,8 @@ h4 {
     position: absolute;
     width: 173px;
     height: 173px;
-    left: 370px;
-    top: 550px;
+    left: 450px;
+    top: 540px;
 }
 
 #integrante1 {
@@ -68,13 +68,14 @@ h4 {
     overflow: hidden;
     width: 129px;
     height: 129px;
+    object-fit: cover;
 }
 
 #p-integrante1 {
     position: absolute;
-    width: 124px;
+    width: 200px;
     height: 30px;
-    left: 1500px;
+    left: 1480px;
     top: 309px;
 }
 
@@ -91,11 +92,12 @@ h4 {
     overflow: hidden;
     width: 129px;
     height: 129px;
+    object-fit: cover;
 }
 
 #p-integrante2 {
     position: absolute;
-    width: 122px;
+    width: 200px;
     height: 30px;
     left: 1450px;
     top: 600px;
@@ -114,14 +116,15 @@ h4 {
     overflow: hidden;
     width: 129px;
     height: 129px;
+    object-fit: cover;
 }
 
 
 #p-integrante3 {
     position: absolute;
-    width: 126px;
+    width: 200px;
     height: 30px;
-    left: 1150px;
+    left: 1130px;
     top: 800px;
 }
 
@@ -130,21 +133,22 @@ h4 {
     width: 129px;
     height: 129px;
     left: 810px;
-    top: 750px;
+    top: 730px;
     border: 4px solid var(--primaria);
     display: block;
     border-radius: 50%;
     overflow: hidden;
     width: 129px;
     height: 129px;
+    object-fit: cover;
 }
 
 #p-integrante4 {
     position: absolute;
-    width: 124px;
+    width: 200px;
     height: 30px;
     left: 810px;
-    top: 890px;
+    top: 870px;
 }
 
 h5 {
@@ -161,7 +165,6 @@ h5 {
         width: 100vw;
         height: 980px;
         object-fit: cover;
-
     }
 
     h1 {
@@ -192,7 +195,7 @@ h5 {
 
     p {
         position: absolute;
-        width: 214px;
+        width: 500px;
         height: 151px;
         left: 150px;
         top: 250px;
@@ -205,10 +208,10 @@ h5 {
 
     h4 {
         position: absolute;
-        width: 192px;
+        width: 400px;
         height: 105px;
-        left: 15px;
-        top: 675px;
+        left: 40px;
+        top: 600px;
         font-size: 14px;
         line-height: 21px;
 
@@ -218,8 +221,8 @@ h5 {
         position: absolute;
         width: 122px;
         height: 122px;
-        left: 226px;
-        top: 665px;
+        left: 480px;
+        top: 570px;
     }
 
     #integrante1 {
