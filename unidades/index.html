@@ -32,10 +32,11 @@
         <div class="container-separador">
             <div class="separador">Veja nossas unidades</div>
         </div>
+        
         <!-- <footer><div class="separador">Veja nossas unidades</div></footer> -->
     </main>
     <script>
-        const mapa = L.map('mapa').setView([-23.5439192, -46.8327736,17], 15)
+        const mapa = L.map('mapa').setView([-23.5043384, -46.8431054], 12)
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mapa)
 
@@ -59,12 +60,54 @@
         }
 
         const unidades = [
-            {
-                id: 1,
-                name: 'Carapicuíba',
-                lat: -23.5439192,
-                lng: -46.8327736,
-            }
+                {
+                    id: 1,
+                    name: 'Vila Fatima',
+                    lat: -23.5985273,
+                    lng: -46.5238523,
+                },
+                {
+                    id: 2,
+                    name: 'Butantã',
+                    lat: -23.5707281,
+                    lng: -46.7192966,
+                },
+                {
+                    id: 3,
+                    name: 'Barueri',
+                    lat: -23.5043384,
+                    lng: -46.8431054,
+                },
+                {
+                    id: 4,
+                    name: 'Jandira',
+                    lat: -23.5299096,
+                    lng: -46.9107319,
+                },
+                {
+                    id: 5,
+                    name: 'Capão Redondo',
+                    lat: -23.6589575,
+                    lng: -46.7740266,
+                },
+                {
+                    id: 6,
+                    name: 'Osasco',
+                    lat: -23.5308967,
+                    lng: -46.8035118,
+                },
+                {
+                    id: 7,
+                    name: 'Guarulhos',
+                    lat: -23.4139991,
+                    lng: -46.4625303,
+                },
+                {
+                    id: 8,
+                    name: 'Sede Alphaville',
+                    lat: -23.4622736,
+                    lng: -46.8960095,
+                }
         ];
 
         unidades.forEach((unidade) => {
