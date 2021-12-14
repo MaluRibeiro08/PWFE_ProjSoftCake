@@ -164,14 +164,15 @@
 }
 
 #catalogo header .adicionar-bolo {
+  display: none;
   width: 172px;
   height: 47px;
   align-items: center;
   justify-content: center;
+  gap: 8px;
 }
 
 #catalogo main .filtro-ingredientes,
-#catalogo header .adicionar-bolo,
 #catalogo main .filtro-ingredientes > div {
   display: flex;
   gap: 8px;

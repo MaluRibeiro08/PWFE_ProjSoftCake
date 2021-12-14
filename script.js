@@ -42,19 +42,21 @@ checarAdmin().then(usuarioEAdmin => {
   obterBolos(usuarioEAdmin);
   carregarUtilitarios(usuarioEAdmin);
 
-  const botaoAdicionarBolo = document.querySelector("#catalogo header .adicionar-bolo");
-  botaoAdicionarBolo.innerHTML = '<i class="fas fa-plus"></i> Adicionar bolo';
-  botaoAdicionarBolo.addEventListener('click', () => {
-    window.location.href = '/produto/cadastro';
-  });
+  if(usuarioEAdmin == true) {
+    const botaoAdicionarBolo = document.querySelector("#catalogo header .adicionar-bolo");
+    botaoAdicionarBolo.display = 'flex';
+    botaoAdicionarBolo.addEventListener('click', () => {
+      window.location.href = '/produto/cadastro';
+    });
+  }
 });
 
-const toggleFAQ = () => {
-  const itemToggle = this.getAttribute('aria-expanded');
+const toggleFAQ = (event) => {
+  const itemToggle = event.target.getAttribute('aria-expanded');
   
   items.forEach(item => item.setAttribute('aria-expanded', 'false'))
   
-  if (itemToggle == 'false') this.setAttribute('aria-expanded', 'true');
+  if (itemToggle == 'false') event.target.setAttribute('aria-expanded', 'true');
 }
 
 items.forEach(item => item.addEventListener('click', toggleFAQ));
