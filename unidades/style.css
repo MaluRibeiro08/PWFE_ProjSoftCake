@@ -68,6 +68,138 @@ h1 {
   padding: 0 5%;
 }
 
+/* ------------------------------------------------------ */
+.container-geral-unidades
+{
+  /* background-color: tomato; */
+  width: 100vw;
+  height: fit-content;
+  padding-left: 133px;
+  padding-right: 133px;
+  display: flex;
+  flex-direction: row;
+  gap: 192px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container-unidade
+{
+  height: fit-content;
+  width: 490px;
+  border: 1.05682px solid #EFE9F4;
+  box-shadow: 0px 0px 25px rgba(18, 18, 18, 0.20);
+  border-radius: 0px 24px;
+  /* background-color: violet; */
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container-unidade h4
+{
+  font-size: 18px;
+  color: var(--primaria);
+  font-weight: 700;
+}
+
+.container-unidade p, .container-unidade li
+{
+  font-size: 18px;
+  color: var(--cinza-escuro);
+}
+
+.container-titulo-unidade
+{
+  height: 70px;
+  width: 100%;
+  background-color: var(--primaria);
+  border-radius: 0px 24px 0px 24px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 23px;
+
+  color: white;
+  font-size: 30px;
+
+}
+
+.container-titulo-unidade h2
+{
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 22px;
+}
+
+.container-endereco, .container-funcionamento
+{
+  padding-left: 38px;
+  padding-right: 38px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+} 
+.container-endereco
+{
+  width: 100%;
+  height: fit-content;
+  /* background-color: wheat; */
+}
+
+.container-funcionamento
+{
+  width: 100%;
+  height: fit-content;
+  /* background-color: chartreuse; */
+}
+.container-dias-horarios
+{
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  /* background-color: honeydew; */
+}
+.container-dias-funcionamento
+{
+  flex-grow: 2;
+  height: 100%;
+  /* background-color: lightsalmon; */
+}
+.container-dias-funcionamento li
+{
+  list-style-position: inside;
+  color: var(--primaria);
+}
+.container-dias-funcionamento span
+{
+  color: var(--cinza-escuro);
+  margin-left: -10px;
+}
+.container-horarios-funcionamento
+{
+  flex-grow: 1;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+
+  /* background-color: lightblue; */
+}
+.container-horarios-funcionamento li
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 17px;
+}
+
 @media (max-width: 1170px) {
   .principal {
     flex-direction: column;
