@@ -11,7 +11,7 @@ const obterBolos = (isAdmin, filtro = null) => {
 	fetch('http://localhost/softcake/backend/v1/bolo/', {
 	  method: 'GET',
 	  headers: {
-		'Content-Type': 'application/json'
+			'Content-Type': 'application/json'
 	  }
 	}).then(response => response.json()).then(listaProdutos => {
 	  listaProdutos = Object.values(listaProdutos);
@@ -41,8 +41,8 @@ const renderizarBolos = (produtos, isAdmin) => {
 	  div.innerHTML = `
 	  ${isAdmin == true ? `
 	    <div class="acoes-produtos">
-	  	<i class="fas fa-edit" onclick="window.location.href = '/produto/edicao/?id=${produto.idBolo}'"></i>
-	  	<i class="fas fa-trash" onclick="deletarBolo(${produto.idBolo})"></i>
+	  		<i class="fas fa-edit" onclick="window.location.href = '/produto/edicao/?id=${produto.idBolo}'"></i>
+	  		<i class="fas fa-trash" id="deletar-${produto.idBolo}"></i>
 	    </div>
 	  ` : ''}
 	    <img src="${produto.imagens[0]}" alt="Imagem ilustrativa de ${produto.nomeCard}">
@@ -59,7 +59,12 @@ const renderizarBolos = (produtos, isAdmin) => {
 	  	  </button>
 	    </div>
 	  `;
+		
 	  divProdutos.appendChild(div);
+
+		divProdutos.querySelector(`#deletar-${produto.idBolo}`).addEventListener('click', () => {
+			deletarBolo(produto.idBolo);
+		});
 	  });
   }
 }
@@ -77,19 +82,19 @@ const deletarBolo = (id) => {
 	const confirmacao = confirm('Deseja realmente excluir este produto?');
   
 	if(confirmacao) {
-	  fetch(`http://localhost/softcake/backend/v1/bolo/${id}`, {
-		method: 'DELETE',
-		headers: {
-		  'Content-Type': 'application/json'
-		}
+	  fetch(`http://localhost/softcake/backend/v1/bolo/?idBolo=${id}`, {
+			method: 'DELETE'
 	  }).then(response => response.json()).then(response => {
-		if(response.status == 'success') {
-		  alert('Produto excluído com sucesso!');
-		  limparBolos();
-		  obterBolos(true);
-		} else {
-		  alert('Erro ao excluir produto!');
-		}
+			console.log(response);
+			
+			if(response.status == 'success') {
+				alert('Produto excluído com sucesso!');
+				limparBolos();
+				obterBolos(true);
+			} else {
+				alert('Erro ao excluir produto!');
+			}
+			
 	  });
 	}
 };
