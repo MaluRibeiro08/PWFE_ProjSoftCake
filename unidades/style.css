@@ -89,6 +89,7 @@ h1 {
   height: fit-content;
   
   display: flex;
+  flex-direction: row ;
   gap: 192px;
   align-items: center;
   justify-content: center;  
@@ -156,6 +157,7 @@ h1 {
 {
   width: 100%;
   height: fit-content;
+  text-align: justify;
   /* background-color: wheat; */
 }
 
@@ -189,7 +191,7 @@ h1 {
 .container-dias-funcionamento span
 {
   color: var(--cinza-escuro);
-  margin-left: -10px;
+  margin-left: -13px;
 }
 .container-horarios-funcionamento
 {
@@ -225,3 +227,58 @@ h1 {
     font-size: 80%;
   }
 }
+
+@media (max-width: 1420px) {
+    .container-unidade p, .container-unidade li, .container-unidade h4
+  {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1420px) {
+  .container-unidade p, .container-unidade li, .container-unidade h4
+  {
+    font-size: 15px;
+  }
+  .container-titulo-unidade h2
+  {
+    font-size: 25px;
+  }
+  .container-horarios-funcionamento li
+  {
+    gap: 8px;
+  }
+}
+
+
+@media (max-width: 1080px) {
+  .container-linha-unidades
+  {
+    flex-direction: column;
+  }
+  .container-linha-unidades, .container-geral-unidades
+  {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 600px)
+{
+  .container-geral-unidades
+  {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .container-unidade
+  {
+    width: 100%; 
+  }
+  .container-dias-horarios
+  {
+    font-size: 12px;
+  }
+}
+
+
+
+
