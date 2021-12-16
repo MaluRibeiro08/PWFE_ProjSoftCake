@@ -14,10 +14,17 @@ main {
     height: 90%;
     background-image: url("../public/images/background2.png");
     background-repeat: no-repeat;
-    background-size: 70%;
-    background-color: salmon;
-    background-position-y: top;
+    background-size: 75% 140%;
+    background-position: 0% 70%;
+    /* background-position: translate(-10%, -100%);; */
+    /* transform: translate(-0%, -10%); */
+    /* background-color: salmon; */
+    /* background-position-y: top; */
 }
+
+/* img {
+    transform: translate(-0%, -10%);
+} */
 
 main .informacoes {
     height: 100%;
@@ -25,24 +32,84 @@ main .informacoes {
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
+    /* background-color: tomato; */
 }
 
 .informacoes h1{
-    
+    color: white;
+    font-size: clamp(2em, 1em + 3vw, 3em);
 }
 
-h1{
-
+.texto-imagem1, .texto-imagem2 {
+    display: flex;
+    align-items: flex-end;
+    gap: 2%;
+    margin-left: 2%;
 }
 
-@media (max-width: 1720px) {
+.texto-imagem1 p {
+    max-width: 50%;
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: clamp(.5em, .5em + .7vw, 1em);
+}
+
+.texto-imagem2 p {
+    max-width: 30%;
+    text-align: center;
+    margin-bottom: -3%;
+    font-size: clamp(.5em, .5em + .7vw, 1em);
+}
+
+.texto-imagem1 img, .texto-imagem2 img {
+    width: 10%;
+}
+
+
+@media (max-width: 1350px) {
     main {
-        background-size: 80%;
+        background-size: 75% 120%;
+    }
+    .texto-imagem1, .texto-imagem2 {
+        align-items: center;
     }
 }
 
-@media (max-width: 1520px) {
+@media (max-width: 860px) {
     main {
-        background-size: 90%;
+        background-size: 200% 120%;
+    }
+    .texto-imagem1, .texto-imagem2 {
+        margin-left: 5%;
+    }
+    .texto-imagem1 {
+        margin-top: 5%;
+    }
+    .texto-imagem1 p {
+        max-width: 70%;
+    }
+    .texto-imagem2 p {
+        max-width: 70%;
+    }
+    .texto-imagem1 img, .texto-imagem2 img {
+        width: 15%;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        background-size: 200% 100%;
+    }
+    .texto-imagem1, .texto-imagem2 {
+        margin-left: 10%;
+    }
+    .texto-imagem2 {
+        margin-top: 10%;
+    }
+    .texto-imagem1 p {
+        max-width: 65%;
+    }
+    .texto-imagem2 p {
+        max-width: 65%;
     }
 }
