@@ -75,58 +75,45 @@ const tratamentoRegistroBolo = () =>
     }
 }
 
-const validacaoCampos = () =>
-{
-    const campoTitulo = document.getElementById("titulo")
-    const campoTituloCard = document.getElementById("titulo-card")
-    const campoDescricao = document.getElementById("descricao")
-    const campoPrecoQuilo = document.getElementById("preco")
-    const inputImagemPrincipal = document.getElementById("inputFile1")
-    const imagemPrincipal = document.getElementById("imagem1")
+const validacaoCampos = () => {
+  const campoTitulo = document.getElementById('titulo')
+  const campoTituloCard = document.getElementById('titulo-card')
+  const campoDescricao = document.getElementById('descricao')
+  const campoPrecoQuilo = document.getElementById('preco')
+  const inputImagemPrincipal = document.getElementById('inputFile1')
+  const imagemPrincipal = document.getElementById('imagem1')
+  var retorno = true;
 
-    var retorno = true
-
-    if (campoTitulo.value.trim() == null || campoTitulo.value == "") {
-        campoTitulo.style.borderColor = "red"
-        retorno = false
-    }else{
-        campoTitulo.style.borderColor = null
-    }
-
-    if (campoTituloCard.value.trim() == null || campoTituloCard.value == "") {
-        campoTituloCard.style.borderColor = "red"
-        retorno = false
-    }else{
-        campoTituloCard.style.borderColor = null
-    }
-    
-    if (campoDescricao.value.trim() == null || campoDescricao.value == "") {
-        campoDescricao.style.borderColor = "red"
-        retorno = false
-    }else{
-        campoDescricao.style.borderColor = null
-    }
-
-    if (campoPrecoQuilo.value.trim() == null || campoPrecoQuilo.value == "" || campoPrecoQuilo.value != 30.0 ) {
-        campoPrecoQuilo.style.borderColor = "red"
-        campoPrecoQuilo.value = 30.0
-        retorno = false
-    }else{
-        campoPrecoQuilo.style.borderColor = null
-    }
-
-    if ( inputImagemPrincipal.files[0] == null) {
-        imagemPrincipal.style.borderColor = "red"       
-    }
-    else{
-        imagemPrincipal.style.borderColor = null
-    }
-
-    return retorno
+  if (campoTitulo.value.trim() == null || campoTitulo.value == '') {
+    campoTitulo.style.borderColor = 'red'
+    retorno = false
+  } campoTitulo.style.borderColor = null
+  
+  if (campoTituloCard.value.trim() == null || campoTituloCard.value == '') {
+    campoTituloCard.style.borderColor = 'red'
+    retorno = false
+  } campoTituloCard.style.borderColor = null
+  
+  if (campoDescricao.value.trim() == null || campoDescricao.value == '') {
+    campoDescricao.style.borderColor = 'red'
+    retorno = false
+  } else campoDescricao.style.borderColor = null
+  
+  if (campoPrecoQuilo.value.trim() == null || campoPrecoQuilo.value == '' || campoPrecoQuilo.value != 30.0) {
+    campoPrecoQuilo.style.borderColor = 'red'
+    campoPrecoQuilo.value = 30.0
+    retorno = false
+  } else campoPrecoQuilo.style.borderColor = null
+  
+  if (inputImagemPrincipal.files[0] == null) imagemPrincipal.style.borderColor = 'red'
+  else imagemPrincipal.style.borderColor = null
+  
+  return retorno
 }
-document.getElementById("inputFile1").addEventListener("change", tratamentoUploadImagem)
-document.getElementById("inputFile2").addEventListener("change", tratamentoUploadImagem)
-document.getElementById("botao-salvar").addEventListener("click", tratamentoRegistroBolo)
+  
+document.getElementById('inputFile1').addEventListener('change', tratamentoUploadImagem);
+document.getElementById('inputFile2').addEventListener('change', tratamentoUploadImagem);
+document.getElementById('botao-salvar').addEventListener('click', tratamentoRegistroBolo);
 
 const adicionarCategoria = () => {
     const novaCategoria = document.getElementById('nova-categoria').value;
