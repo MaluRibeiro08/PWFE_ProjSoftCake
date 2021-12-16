@@ -30,15 +30,20 @@ main {
 
 .imagens .conteudo {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .imagens img:not(.voltar) {
     width: 100%;
     height: 420px;
     background: rgba(0, 168, 168, 0.1);
-    border: 4px solid var(--primaria);
+    border: 3px solid var(--primaria);
     object-fit: cover;
     cursor: pointer;
+    background: url(/public/icons/mais.png) no-repeat center;
+    border-radius: 20px;
 }
 
 .imagens .conteudo > img {
@@ -46,26 +51,32 @@ main {
     height: 421px;
     border-radius: 20px;
     background: url(/public/icons/mais.png) no-repeat center;
+    z-index: 1;
 }
 
-.imagens .secundarias {
+.imagens .secundarias{
     width: 100%;
     display: flex;
     gap: 18px;
 }
 
-.imagens .secundarias img, .imagens .secundarias div {
+.imagens .secundarias img {
     width: 122px;
     height: 90px;
     border-radius: 12px;
-    border: 4px solid var(--primaria);
+    z-index: 1;
     background: url(/public/icons/mais.png) no-repeat center;
+    border: 3px solid var(--primaria);
+
+}
+
+.imagens .secundarias div {
+    width: 122px;
+    border-radius: 12px;
 }
 
 .secundarias input {
     opacity: 0;
-    width: 100%;
-    height: 100%;
 }
 
 .conteudo {
@@ -101,17 +112,29 @@ main {
     border: 2px solid var(--primaria);
 }
 
-.informacoes .conteudo input, .informacoes .conteudo textarea {
+.informacoes .conteudo input:not([type="checkbox"]), .informacoes .conteudo textarea {
     width: 100%;
     border-radius: 5px;
     background: rgba(0, 168, 168, 0.05);
-    border: 1px solid var(--primaria);
+    border: 1px solid rgb(218, 218, 218);
     object-fit: cover;
     padding: 7px 10px;
     margin-bottom: 7px;
+    outline: none;
 
     font-size: 16px;
     color: var(--preto);
+}
+
+.informacoes .conteudo input:focus, .informacoes .conteudo textarea:focus {   
+    background: rgba(6, 129, 129, 0.158);
+    border: 1px solid var(--primaria);
+}
+
+.informacoes .conteudo .categorias {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 ::placeholder {
@@ -126,6 +149,42 @@ main {
 #image-mais{
     height: 80px;
     width: 70px;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.inputFile
+{
+    width: 100%;
+    opacity: 0;
+    display: none;
+}
+
+.informacoes .conteudo .categorias .categoria, #adicionar-categoria {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#adicionar-categoria input[type="text"] {
+    width: 70%;
+    background: transparent;
+    border: none;
+    border: 1px solid var(--cinza);
+    margin-bottom: 0;
+}
+
+#adicionar-categoria button {
+    height: 41px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 @media (max-width: 1240px) {
