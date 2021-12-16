@@ -3,31 +3,23 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* background-color: red; */
-    /* overflow: hidden; */
+    overflow-y: hidden;
 }
 
 main {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     width: 100%;
     height: 90%;
     background-image: url("../public/images/background2.png");
     background-repeat: no-repeat;
     background-size: 75% 140%;
     background-position: 0% 70%;
-    /* background-position: translate(-10%, -100%);; */
-    /* transform: translate(-0%, -10%); */
-    /* background-color: salmon; */
-    /* background-position-y: top; */
 }
-
-/* img {
-    transform: translate(-0%, -10%);
-} */
 
 main .informacoes {
     height: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -40,18 +32,28 @@ main .informacoes {
     font-size: clamp(2em, 1em + 3vw, 3em);
 }
 
+.container-textos-imagens {
+    /* background-color: violet; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+
 .texto-imagem1, .texto-imagem2 {
+    width: 100%;
     display: flex;
     align-items: flex-end;
     gap: 2%;
-    margin-left: 2%;
+    margin-left: 5%;
+    /* background-color: tomato; */
 }
 
 .texto-imagem1 p {
     max-width: 50%;
     text-align: center;
-    margin-bottom: 2%;
     font-size: clamp(.5em, .5em + .7vw, 1em);
+    margin-top: 2%;
 }
 
 .texto-imagem2 p {
@@ -63,6 +65,50 @@ main .informacoes {
 
 .texto-imagem1 img, .texto-imagem2 img {
     width: 10%;
+}
+
+.container-integrantes {
+    width: 20%;
+}
+
+.integrantes {
+    border: 4px solid var(--primaria);
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50%;
+    height: 30%;
+    object-fit: cover;
+    margin-top: 10%;
+}
+
+.p-integrantes {
+    width: 200px;
+    height: 30px;
+    margin-left: 2%;
+}
+
+.imagens-integrantes1 {
+    width: 100%;
+    height: 80%;
+}
+
+#vitor {
+    margin-left: 20%;
+    margin-top: 20%;
+}
+#p-vitor {
+    margin-left: 25%;
+}
+
+#nath {
+    margin-top: -45%;
+    height: 25%;
+    margin-left: -90%;
+}
+#p-nath {
+    height: 25%;
+    margin-left: -85%;
 }
 
 
@@ -78,6 +124,8 @@ main .informacoes {
 @media (max-width: 860px) {
     main {
         background-size: 200% 120%;
+        flex-direction: column;
+        overflow: auto;
     }
     .texto-imagem1, .texto-imagem2 {
         margin-left: 5%;
